@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/', 'BotController@sayHello')->name('bot.hi');
+Route::post('/bot/calculate', 'BotController@calculateDirection')->name('bot.calculate');
